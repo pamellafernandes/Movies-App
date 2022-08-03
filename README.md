@@ -40,4 +40,4 @@ This project was developed using the following technologies:
     <br>
     <br>
 
-### Deploy
+### 🌐 Deploy
