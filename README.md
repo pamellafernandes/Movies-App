@@ -13,7 +13,7 @@
    🖥️ Desktop
 </h1>
 <p align="center">
-    <img align="center" alt="Preview Desktop" title="Preview Desktop" src="https://media.discordapp.net/attachments/858230125488635944/1004188160865087578/Desktop.png?width=1355&height=671" />
+    <img align="center" alt="Preview Desktop" title="Preview Desktop" src="https://media.discordapp.net/attachments/961414466346573854/1004223632882548767/Desktop.png?width=1355&height=671" />
 </p>
 
 <br/>
@@ -23,7 +23,7 @@
 </h1>
 
 <p align="center">
-    <img alt="Preview Mobile" title="Preview Mobile" src="https://media.discordapp.net/attachments/858230125488635944/1004191448410894356/Mobile.png" />
+    <img alt="Preview Mobile" title="Preview Mobile" src="https://media.discordapp.net/attachments/961414466346573854/1004223722019885086/Mobile.png" />
 </p>
 
 <br>
