@@ -35,7 +35,7 @@ function Details() {
                     <h1>{movie.title}</h1>
                     <span>Sinopse: {movie.sinopse}</span>
                     <span className='release-date'>Release date: {movie.releaseDate}</span>
-                    <a href='/'>Go Back</a>
+                    <a href='/'>Voltar</a>
                 </div>
             </div> 
         </Container>
