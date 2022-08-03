@@ -1,6 +1,5 @@
 import { MovieList, Movie, Search } from "./styles";
 import { useEffect, useMemo, useState } from "react";
-import { API_KEY } from "../../config/key";
 import { api } from "../../services/api";
 import { Link } from "react-router-dom";
 
@@ -9,7 +8,8 @@ export default function List() {
    const [movies, setMovies] = useState([]);
    const image_path = "https://image.tmdb.org/t/p/w500";
    const [page, setPage] = useState("1");
-   const url_api = `/movie/popular?api_key=${API_KEY}&language=pt-BR&page=${page}`;
+   const url_api = `/movie/popular?api_key=${process.env.API_KEY}&language=pt-BR&page=${page}`;
+   console.log(process.env.NODE_ENV)
 
    async function apiMovie() {
       const response = await api.get(url_api);

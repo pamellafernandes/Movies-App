@@ -1,12 +1,11 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
-import { API_KEY } from '../../config/key';
 import { api } from "../../services/api";
 import { Container } from './styles';
 
 function Details() {
     const { id } = useParams()
-    const url_api = `/movie/${id}?api_key=${API_KEY}&language=pt-BR`;
+    const url_api = `/movie/${id}?api_key=${process.env.API_KEY}&language=pt-BR`;
     const image_path = "https://image.tmdb.org/t/p/w500";
     const [movie, setMovie] = useState({})
 
