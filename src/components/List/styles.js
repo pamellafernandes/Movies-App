@@ -8,8 +8,12 @@ export const Search = styled.input`
     font-size: 1.2rem;
     padding: .6rem;
     outline: none;
-    border-radius: .2rem;
-    border: none;
+    border-radius: .4rem;
+    border: 0.2rem solid indigo;
+
+    @media screen and (max-width: 600px) {
+        width: 70%;
+    }
 `;
 
 export const MovieList = styled.ul `
@@ -36,6 +40,10 @@ export const MovieList = styled.ul `
     a:hover {
         transform: scale(1.1);
        
+    }
+
+    @media screen and (max-width: 600px){
+        row-gap: 1rem;
     }
 `;
 
