@@ -2,13 +2,12 @@ import styled from "styled-components";
 
 export const Search = styled.input`
     margin: 0 auto;
+    padding: 1rem;
     margin-bottom: 3rem;
     width: 50%;
-    height: 2rem;
     font-size: 1.2rem;
-    padding: .6rem;
     outline: none;
-    border-radius: .4rem;
+    border-radius: .5rem;
     border: 0.2rem solid indigo;
 
     @media screen and (max-width: 600px) {
