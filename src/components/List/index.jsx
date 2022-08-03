@@ -1,41 +1,54 @@
-import { MovieList, Movie } from "./styles";
-import { useEffect, useState } from "react";
+import { MovieList, Movie, Search } from "./styles";
+import { useEffect, useMemo, useState } from "react";
 import { API_KEY } from "../../config/key";
 import { api } from "../../services/api";
+import { Link } from "react-router-dom";
 
 export default function List() {
-  const [movies, setMovies] = useState([]);
-  const image_path = "https://image.tmdb.org/t/p/w500";
-  const [page, setPage] = useState("1");
-  const url_api = `/movie/popular?api_key=${API_KEY}&language=en-US&page=${page}`;
+   const [filter, setFilter] = useState('');
+   const [movies, setMovies] = useState([]);
+   const image_path = "https://image.tmdb.org/t/p/w500";
+   const [page, setPage] = useState("1");
+   const url_api = `/movie/popular?api_key=${API_KEY}&language=pt-BR&page=${page}`;
 
    async function apiMovie() {
       const response = await api.get(url_api);
-      console.log(response.data)
+      console.log(response.data);
       setMovies(response.data.results);
    }
 
    useEffect(() => {
       apiMovie();
-   },[]);
+   }, []);
 
-  return (
-    <>
-      <MovieList>
-        {movies.map((movie) => {
-          return (
-            <Movie hey={movies.id}>
-              <a href="https://google.com/">
-                <img
-                  src={`${image_path}${movie.poster_path}`}
-                  alt={movies.title}
-                />
-              </a>
-              <span>{movie.title}</span>
-            </Movie>
-          );
-        })}
-      </MovieList>
-    </>
-  );
+
+   const moviesFiltered = useMemo(() =>{
+      const filterLowerCase = filter.toLowerCase();
+      
+      return movies.filter(movie =>{
+         return movie.title.toLowerCase().includes(filterLowerCase);
+      })
+   },[filter])
+  const moviesToDisplay = filter ? moviesFiltered:movies;
+   return (
+      <>
+      <Search type="text" placeholder="Search..."
+         value={filter}
+         onChange={(event) => setFilter(event.target.value)}
+      />
+         <MovieList>
+            {moviesToDisplay.map((movie) => {
+               return (
+                  <Movie hey={movies.id}>
+                     <Link to={`/details/${movie.id}`}>
+                        <img src={`${image_path}${movie.poster_path}`} alt={movies.title} />
+                     </Link>
+
+                     <span>{movie.title}</span>
+                  </Movie>
+               );
+            })}
+         </MovieList>
+      </>
+   );
 }
