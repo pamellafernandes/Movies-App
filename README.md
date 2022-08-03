@@ -41,4 +41,4 @@ This project was developed using the following technologies:
     <br>
 
 ### 🌐 Deploy
-`https://movies-cg2id8c5d-pamellafernandes.vercel.app`
+`https://movies-app-pf.vercel.app`
