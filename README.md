@@ -13,7 +13,7 @@
    🖥️ Desktop
 </h1>
 <p align="center">
-    <img align="center" alt="Preview Desktop" title="Preview Desktop" src="https://media.discordapp.net/attachments/961414466346573854/1004223632882548767/Desktop.png?width=1355&height=671" />
+    <img align="center" alt="Preview Desktop" title="Preview Desktop" src="https://media.discordapp.net/attachments/719339392337969212/1004414797145706546/desktop.png?width=1349&height=671" />
 </p>
 
 <br/>
