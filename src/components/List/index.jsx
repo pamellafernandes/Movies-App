@@ -31,7 +31,7 @@ export default function List() {
   const moviesToDisplay = filter ? moviesFiltered:movies;
    return (
       <>
-      <Search type="text" placeholder="Search..."
+      <Search type="text" placeholder="Pesquisar..."
          value={filter}
          onChange={(event) => setFilter(event.target.value)}
       />
