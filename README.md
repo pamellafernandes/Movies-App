@@ -36,6 +36,7 @@ This project was developed using the following technologies:
 -   [Axios](https://axios-http.com/ptbr/docs/intro)
 -   [Styled Components](https://styled-components.com/)
 -   [ViteJS](https://vitejs.dev/)
+-   [Vercel](https://vercel.com/home?utm_source=next-site&utm_medium=banner&utm_campaign=next-website)
     <br>
     <br>
     <br>
